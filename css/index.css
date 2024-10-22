@@ -1,5 +1,206 @@
-html, body {
+/******* RESET **********/
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body,
+  h1,
+  h2,
+  h3 {
     margin: 0;
+  }
+  p {
+    margin-block: .5em;
+  }
+  img {
+    max-inline-size: 100%;
+    block-size: auto;
+    font-style: italic;
+    vertical-align: middle;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+  }
+  /* *************************** */
+  
+  body {
+    min-block-size: 100vh;
+    min-block-size: 100svh;
+    font-family: 'Manrope', sans-serif;
+    background-color: #ededed;
+    color: #000;
+  }
+  
+  
+  /****** UTILITY CLASSES *******/
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     padding: 0;
-}
-
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .icon {
+    inline-size: 1.5rem;
+    aspect-ratio: 1;
+  }
+  
+  .container {
+    margin-inline: auto;
+    inline-size: clamp(20.625rem, 90vw, 25rem);
+  }
+  /* ************************** */
+  
+  .header,
+  .post-container,
+  .attribution {
+    margin-inline: auto;
+    max-inline-size: 31.25rem;
+  }
+  .header {
+    padding-block: 1em;
+    border-bottom: 1.5px solid #c6c6c6;
+  }
+  
+  .header,
+  .post {
+    background-color: #fff;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .post-container {
+    display: grid;
+    gap: 1.5em;
+  }
+  
+  .post {
+    padding-block: 1em;
+  }
+  
+  .post-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+      "avatar name"
+      "avatar location";
+    align-items: center;
+    column-gap: .6em;
+  }
+  
+  .post-avatar {
+    grid-area: avatar;
+  }
+  
+  .post-username {
+    grid-area: name;
+    align-self: self-end;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  
+  .post-location {
+    grid-area: location;
+    align-self: self-start;
+    font-size: .85rem;
+    font-weight: 500;
+  }
+  
+  .post-body {
+    margin-top: 1em;
+    text-align: center;
+  }
+  
+  .logo {
+    inline-size: 40%;
+  }
+  
+  .user-avatar,
+  .post-avatar {
+    inline-size: 3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  
+  .post-footer {
+    margin-top: 1em;
+  }
+  
+  .post-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .btn {
+    inline-size: 2.5rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  
+  .post-likes,
+  .post-comment {
+    font-size: .9rem;
+  }
+  
+  .post-likes,
+  .comment-username {
+    font-weight: 800;
+  }
+  
+  .attribution {
+    padding-block: 1em;
+    font-size: .78rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .attribution-cta {
+    padding-inline: .25em;
+    margin-inline: .25em;
+    font-weight: 800;
+  }
+  
+  
+  
+  /***** STATES *****/
+  *:focus-visible {
+    outline: 2px dotted #5356FF;
+  }
+  
+  @media (hover:hover) {
+    .like-btn:hover {
+      background-color: #FFEDFF;
+      color: #CD113B;
+    }
+    .comment-btn:hover {
+      background-color: #e3f1fd;
+      color: #008DDA;
+    }
+    .dm-btn:hover {
+      background-color: #E0FBE2;
+      color: #107f1a;
+    }
+    .attribution-cta:hover {
+      text-decoration: none;
+    }
+  }

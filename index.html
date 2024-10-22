@@ -6,26 +6,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-        <script type="module" src="./js/index.js" defer></script>
+        <title>Oldagram</title>
     </head>
-
-    <title>Oldagram</title>
 
     <body>
         <!-- NAVIGATION -->
-        <header>
-            <img src="./assets/images/logo.png">
-            <img src="./assets/images/user-avatar.png">
-        </header>
+        <header class="header">
+            <div class="header-container container">
+              <h1>
+                <span class="sr-only">Oldagram</span>
+                <img src="./assets/images/logo.png" alt="Oldagram" class="logo">
+              </h1>
+              <div>
+                <img src="./assets/images/user-avatar.png" alt="User." class="user-avatar">
+              </div>
+            </div>
+          </header>
+        
+          <main class="post-container" id="post-container">
+          </main>
 
-        <!-- MAIN -->
-         <main>
-         </main>
+         <footer></footer>
 
-         <footer>
-         </footer>
-
-        <script src="./js/index.js"></script>
-
+         <script type="module" src="./js/index.js"></script>
     </body>
 </html>
